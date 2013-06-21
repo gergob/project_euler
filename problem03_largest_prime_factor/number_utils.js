@@ -37,9 +37,43 @@ number_utils = {
 		
 		return result;
 
+	},
+
+	isPalindrome: function(number) {		
+		var numberAsString = number.toString();
+		
+		for(var front=0, end=numberAsString.length-1; front<end; front++,end--) {
+			if(numberAsString[front] != numberAsString[end]) {
+				return false;
+			}
+		}
+		
+		return true;
+	},
+
+	printArray: function(array, delimiter) {
+		if(array) {
+			var output = '';
+			var localDelimiter = delimiter || ',';
+			for(var i=0; i < array.length ; ++i) {
+				output += (array[i] + localDelimiter);
+			}
+			console.log(output);
+		}
+	},
+
+	checkIfAllNumbersEvenlyDivide : function(numberToDivide, maxNumberToUse) {
+		for(var cursor = 1; cursor <= maxNumberToUse; ++cursor) {
+			if(numberToDivide % cursor != 0) {
+				return false;
+			}
+		}
+
+		return true;
 	}
 
 };
+
 
 module.exports = number_utils;
 

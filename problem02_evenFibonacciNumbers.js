@@ -56,5 +56,5 @@ for (var cursor=1; cursor<result.length; ++cursor) {
 }
 
 fs.writeFileSync(outFileName, output);  
-console.log("Script: " + __filename + "\nWrote: " + output + "To: " + outFileName);
+console.log("Script: " + __filename + "\nWrote: " + output + "\nTo: " + outFileName);
 
