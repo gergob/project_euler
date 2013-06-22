@@ -8,7 +8,7 @@
 
 var numUtils = require('./problem03_largest_prime_factor/number_utils.js');
 var fs = require('fs');
-var outFileName = "problem05_smallest_multiple.txt"
+var outFileName = "problem05_smallest_multiple.txt";
 
 var theNumber = 0;
 for(var cursor=22; ;cursor ++) {

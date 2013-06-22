@@ -11,7 +11,7 @@
 //Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
 
 var fs = require('fs');
-var outFileName = "problem06_sum_square_differences.txt"
+var outFileName = "problem06_sum_square_differences.txt";
 
 var sumOfFirst100Numbers = 0;
 var sumOfFirst100Squares = 0;
