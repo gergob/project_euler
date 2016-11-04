@@ -16,13 +16,13 @@ var outFileName = "problem06_sum_square_differences.txt";
 var sumOfFirst100Numbers = 0;
 var sumOfFirst100Squares = 0;
 
-for(var cursor = 1; cursor <=100; ++cursor) {
-	sumOfFirst100Numbers += cursor;
-	sumOfFirst100Squares += (cursor * cursor);
+for (var cursor = 1; cursor <= 100; ++cursor) {
+    sumOfFirst100Numbers += cursor;
+    sumOfFirst100Squares += (cursor * cursor);
 }
 
 
-var output = "The difference between the sum of the squares of the first one hundred natural numbers and the square of the sum is " + ((sumOfFirst100Numbers*sumOfFirst100Numbers) - sumOfFirst100Squares).toString();
+var output = "The difference between the sum of the squares of the first one hundred natural numbers and the square of the sum is " + ((sumOfFirst100Numbers * sumOfFirst100Numbers) - sumOfFirst100Squares).toString();
 
-fs.writeFileSync(outFileName, output);  
+fs.writeFileSync(outFileName, output);
 console.log("Script: " + __filename + "\nWrote: " + output + "\nTo: " + outFileName);

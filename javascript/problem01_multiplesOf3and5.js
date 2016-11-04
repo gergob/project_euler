@@ -13,31 +13,33 @@ var sums = new Array();
 
 
 function getSumOfNumbers(number) {
-	var sum = 0;
-	var divider = 10;
-	do {
-		sum += Math.floor(number % divider);
-		number = Math.floor(number / divider);
+    var sum = 0;
+    var divider = 10;
+    do {
+        sum += Math.floor(number % divider);
+        number = Math.floor(number / divider);
 
-	} while( number != 0)
+    } while (number != 0)
 
-	return sum;
+    return sum;
 }
 
 
-for (var cursor=1; cursor<1000; ++cursor) {
-	if(cursor % 3 == 0 || cursor % 5 == 0) {
-		sums.push({"number" : cursor, "sum" : getSumOfNumbers(cursor)});
-	}
+for (var cursor = 1; cursor < 1000; ++cursor) {
+    if (cursor % 3 == 0 || cursor % 5 == 0) {
+        sums.push({
+            "number": cursor,
+            "sum": getSumOfNumbers(cursor)
+        });
+    }
 }
 
 
 
 var output = "";
-for (var cursor=1; cursor<sums.length; ++cursor) {
-	output+= (cursor == sums.length ? sums[cursor].number + " : "+sums[cursor].sum : sums[cursor].number + " : "+sums[cursor].sum + "\n"  );
+for (var cursor = 1; cursor < sums.length; ++cursor) {
+    output += (cursor == sums.length ? sums[cursor].number + " : " + sums[cursor].sum : sums[cursor].number + " : " + sums[cursor].sum + "\n");
 }
 
-fs.writeFileSync(outFileName, output);  
+fs.writeFileSync(outFileName, output);
 console.log("Script: " + __filename + "\nWrote: " + output + "To: " + outFileName);
-

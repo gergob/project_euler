@@ -16,14 +16,14 @@ var counter = 2;
 var currentNumber = 3;
 
 do {
-	if(numUtils.isPrime(currentNumber)) {
-		++counter;
-		if(counter == 10001) break;
-	}
-	currentNumber += 2;
-}while(true)
+    if (numUtils.isPrime(currentNumber)) {
+        ++counter;
+        if (counter == 10001) break;
+    }
+    currentNumber += 2;
+} while (true)
 
 var output = "The 10001th prime number is " + currentNumber;
 
-fs.writeFileSync(outFileName, output);  
+fs.writeFileSync(outFileName, output);
 console.log("Script: " + __filename + "\nWrote: " + output + "\nTo: " + outFileName);

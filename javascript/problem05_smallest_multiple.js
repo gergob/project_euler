@@ -11,14 +11,14 @@ var fs = require('fs');
 var outFileName = "problem05_smallest_multiple.txt";
 
 var theNumber = 0;
-for(var cursor=22; ;cursor ++) {
-	if(numUtils.checkIfAllNumbersEvenlyDivide(cursor, 20)) {
-		theNumber = cursor;
-		break;
-	}	
+for (var cursor = 22;; cursor++) {
+    if (numUtils.checkIfAllNumbersEvenlyDivide(cursor, 20)) {
+        theNumber = cursor;
+        break;
+    }
 }
 
 var output = "The smallest positive number which can be evenly divisible by all of the numbers from 1 to 20 is " + theNumber;
 
-fs.writeFileSync(outFileName, output);  
+fs.writeFileSync(outFileName, output);
 console.log("Script: " + __filename + "\nWrote: " + output + "\nTo: " + outFileName);

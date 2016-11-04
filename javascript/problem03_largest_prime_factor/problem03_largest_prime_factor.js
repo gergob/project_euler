@@ -12,17 +12,17 @@ var numberUtils = require('./number_utils');
 var theNumber = 600851475143;
 var outFileName = "largest_prime_factor_of_600851475143.txt"
 
-var primes = numberUtils.getPrimesTillNumber(Math.floor(Math.sqrt(theNumber))+1);
+var primes = numberUtils.getPrimesTillNumber(Math.floor(Math.sqrt(theNumber)) + 1);
 var largestPrimeFactor = 0;
 
-for(var i=primes.length -1; i >=0; i--)  {
-	if(theNumber% primes[i] == 0) {
-		largestPrimeFactor = primes[i];
-		break;
-	}
+for (var i = primes.length - 1; i >= 0; i--) {
+    if (theNumber % primes[i] == 0) {
+        largestPrimeFactor = primes[i];
+        break;
+    }
 }
 
 var output = "The largest prime factor of number " + theNumber + " is " + largestPrimeFactor;
 
-fs.writeFileSync(outFileName, output);  
+fs.writeFileSync(outFileName, output);
 console.log("Script: " + __filename + "\nWrote: " + output + "\nTo: " + outFileName);
